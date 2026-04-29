@@ -3,81 +3,744 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OtoEvrim | Arabaların Tarihsel Yolculuğu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>OtoEvrim | Arabaların Evrimi: Geçmişten Geleceğe</title>
+    <meta name="description" content="Arabaların 1886'dan günümüze uzanan etkileyici evrimini, markaları, teknolojileri ve geleceğin mobilite trendlerini keşfedin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <nav id="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-car-side"></i> Oto<span>Evrim</span>
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <i class="fa-solid fa-car-side"></i>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Ana Sayfa</a></li>
-            <li><a href="#timeline">Tarihçe</a></li>
-            <li><a href="#future">Gelecek</a></li>
-            <li><a href="#contact">İletişim</a></li>
-        </ul>
-    </nav>
+    </div>
 
-    <header id="home" class="hero">
-        <div class="hero-content reveal">
-            <h1>Tekerleğin İcadından <br> <span>Otonom Sürüşe</span></h1>
-            <p>Otomobillerin büyüleyici evrimine tanık olun. Tarihi baştan yazan mühendislik harikalarını keşfedin.</p>
-            <a href="#timeline" class="btn">Tarihçeyi Keşfet</a>
-        </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Yukarı çık">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <header class="site-header" id="anasayfa">
+        <nav id="navbar" class="container">
+            <a href="#anasayfa" class="logo" aria-label="OtoEvrim ana sayfa">
+                <i class="fa-solid fa-car-side"></i>
+                <span>Oto</span>Evrim
+            </a>
+
+            <button id="menuToggle" class="menu-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="navLinks" class="nav-links">
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#zaman-cizelgesi">Zaman Çizelgesi</a></li>
+                <li><a href="#efsane-araclar">Efsane Araçlar</a></li>
+                <li><a href="#markalar">Markalar</a></li>
+                <li><a href="#teknoloji">Teknoloji</a></li>
+                <li><a href="#kategoriler">Kategoriler</a></li>
+                <li><a href="#karsilastirma">Karşılaştırma</a></li>
+                <li><a href="#gelecek">Gelecek</a></li>
+                <li><a href="#sss">SSS</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="timeline" class="timeline-section">
-        <h2 class="section-title reveal">Evrimin Aşamaları</h2>
-        
-        <div class="timeline-grid">
-            <div class="card reveal">
-                <div class="card-icon"><i class="fa-solid fa-horse-head"></i></div>
-                <h3>1886 - İlk Kıvılcım</h3>
-                <p>Karl Benz tarafından üretilen "Benz Patent-Motorwagen", içten yanmalı motorla çalışan ilk modern otomobil olarak tarihe geçti.</p>
+    <main>
+        <section class="hero parallax-section">
+            <div class="hero-bg"></div>
+            <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+            <div class="container hero-content">
+                <p class="eyebrow reveal-up">Okul Projesi - Modern Web Tasarım</p>
+                <h1 class="reveal-up">Arabaların Evrimi: <span>Tekerlekten Yapay Zekâya</span></h1>
+                <p class="hero-text reveal-up">
+                    1886'da doğan otomobil, yüzyıllar boyunca sadece bir ulaşım aracı olmadı; kültürü, ekonomiyi, şehirleri ve insan hayatını yeniden şekillendiren bir dönüşüm simgesine dönüştü.
+                    Erken dönem buharlı girişimlerden modern hiper otomobillere, elektrikli devrimden otonom mobiliteye kadar uzanan kapsamlı bir yolculuğa hazır mısınız?
+                </p>
+                <div class="hero-actions reveal-up">
+                    <a href="#zaman-cizelgesi" class="btn btn-primary"><i class="fa-solid fa-clock-rotate-left"></i> Tarihi Keşfet</a>
+                    <a href="#gelecek" class="btn btn-ghost"><i class="fa-solid fa-rocket"></i> Geleceğe Bak</a>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Aşağı Kaydır</span>
+                    <div class="scroll-line"></div>
+                </div>
             </div>
-            
-            <div class="card reveal">
-                <div class="card-icon"><i class="fa-solid fa-industry"></i></div>
-                <h3>1908 - Seri Üretim</h3>
-                <p>Henry Ford'un Model T'yi yürüyen bant sistemiyle üretmesi, otomobili lüks bir eşya olmaktan çıkarıp halka indirdi.</p>
-            </div>
+        </section>
 
-            <div class="card reveal">
-                <div class="card-icon"><i class="fa-solid fa-gauge-high"></i></div>
-                <h3>1950'ler - Altın Çağ</h3>
-                <p>Kaslı arabalar (muscle cars), devasa kuyruk yüzgeçleri ve hız tutkusu. Tasarımın sınırlarının zorlandığı aerodinamik yıllar.</p>
+        <section class="marquee-section">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>Mercedes-Benz</span><span>BMW</span><span>Ferrari</span><span>Porsche</span><span>Tesla</span><span>Ford</span><span>Lamborghini</span><span>Toyota</span><span>Audi</span><span>Honda</span><span>McLaren</span><span>Bugatti</span>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <span>Mercedes-Benz</span><span>BMW</span><span>Ferrari</span><span>Porsche</span><span>Tesla</span><span>Ford</span><span>Lamborghini</span><span>Toyota</span><span>Audi</span><span>Honda</span><span>McLaren</span><span>Bugatti</span>
+                </div>
             </div>
+        </section>
 
-            <div class="card reveal">
-                <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-                <h3>1980'ler - Dijitalleşme</h3>
-                <p>Elektronik yakıt enjeksiyonu, ABS fren sistemleri ve araç içi bilgisayarların standartlaşmaya başladığı teknolojik sıçrama dönemi.</p>
+        <section id="zaman-cizelgesi" class="section">
+            <div class="container">
+                <p class="eyebrow reveal-up">Tarihsel Yolculuk</p>
+                <h2 class="section-title reveal-up">Detaylı Zaman Çizelgesi</h2>
+                <p class="section-subtitle reveal-up">Otomobilin her on yılda farklı bir kimliğe büründüğü dönüm noktaları ve dönüştürücü yenilikler.</p>
+
+                <div class="timeline">
+                    <article class="timeline-item reveal-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">1886</span>
+                            <h3>Modern Otomobilin Doğuşu</h3>
+                            <p>Karl Benz'in Patent-Motorwagen modeli, içten yanmalı motorlu ilk pratik otomobil kabul edilir. Üç tekerlekli bu araç, saatte yaklaşık 16 km hıza ulaşabiliyordu ve bireysel motorlu ulaşımın başlangıcını simgeliyordu. Bu tarih, insanlık tarihinin en önemli mühendislik kilometre taşlarından biridir.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">1908</span>
+                            <h3>Ford Model T ve Seri Üretim Devrimi</h3>
+                            <p>Henry Ford'un hareketli montaj hattı üretim maliyetlerini dramatik biçimde düşürdü. Bir araç 12,5 saatte üretilebilir hale geldi. Otomobil toplumun daha geniş kesimleri için ulaşılabilir hale geldi ve kentsel yaşamın temelleri yeniden atıldı.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">1920'ler</span>
+                            <h3>Tasarım ve Konforun Yükselişi</h3>
+                            <p>Kapalı kasalar, daha güçlü motorlar, elektrikli marş motoru ve şehir içi kullanım odaklı yenilikler otomobili günlük yaşamın merkezine taşımaya başladı. Cam sayısı arttı, süspansiyon sistemleri gelişti ve sürüş konforu ciddi oranda iyileşti.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">1930'lar</span>
+                            <h3>Aerodinamik ve Lüks Dönemi</h3>
+                            <p>Chrysler Airflow gibi öncü modeller aerodinamiğin önemini gösterdi. Chrysler, Lincoln ve Cadillac gibi markalar lüks segmenti tanımladı. Bağımsız ön süspansiyon ve hidrolik frenler standart hale gelmeye başladı.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">1950'ler</span>
+                            <h3>Altın Çağ ve İkonik Çizgiler</h3>
+                            <p>Krom detaylar, büyük gövdeler, V8 motorlar ve otomatik şanzıman döneme damga vurdu. Amerika'da otomobil, özgürlüğün ve statünün güçlü bir sembolüne dönüştü. Power steering ve disk frenler gibi yenilikler ortaya çıktı.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">1960'lar</span>
+                            <h3>Performans Rekabeti ve Muscle Car Kültürü</h3>
+                            <p>Pontiac GTO, Ford Mustang ve Chevrolet Camaro gibi ikonlar doğdu. Avrupa'da Ferrari ve Porsche gibi markalar yarış teknolojisini yola taşıdı. Hız ve sürüş keyfi ön plana çıktı; otomobil sporları popülerlik kazandı.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">1970'ler</span>
+                            <h3>Petrol Krizi ve Verimlilik Dönemi</h3>
+                            <p>1973 petrol krizi otomotiv sektörünü kökten değiştirdi. Yakıt tüketimi önemli bir kriter haline geldi. Japon markaları ekonomik ve güvenilir modellerle küresel pazarda yükselişe geçti. Katalitik konvertörler emisyon kontrolünde rol oynamaya başladı.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">1980'ler</span>
+                            <h3>Elektronik Çağın Başlangıcı</h3>
+                            <p>ABS, elektronik yakıt enjeksiyonu, turbo şarj ve dijital gösterge panelleri araç güvenliği ile sürüş kalitesini ciddi biçimde artırdı. On-board bilgisayarlar ve elektronik kontrol üniteleri (ECU) yaygınlaştı.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">1990'lar</span>
+                            <h3>Küreselleşme ve Güvenlik Standartları</h3>
+                            <p>Hava yastıkları, çarpışma testleri ve emisyon standartları dünya genelinde önem kazandı. SUV segmenti patlama yaptı. Markalar uluslararası platformda yoğun rekabete girdi ve kalite standartları yükseldi.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">2000'ler</span>
+                            <h3>Dijital Bağlantı ve Hibrit Adımı</h3>
+                            <p>Toyota Prius ile hibrit teknolojisi ana akıma girdi. Navigasyon sistemleri, Bluetooth bağlantısı, sürücü destek teknolojileri ve gelişmiş güvenlik sistemleri otomobilleri daha akıllı hale getirdi.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">2010'lar</span>
+                            <h3>Elektrikli Dönüşümün Hızlanması</h3>
+                            <p>Tesla Model S ile elektrikli araçlar global ölçekte popülerleşti. Batarya menzilleri arttı, hızlı şarj altyapıları yaygınlaştı. Otonom sürüş testleri başladı ve ADAS sistemleri standart hale geldi.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item reveal-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="year">2020'ler</span>
+                            <h3>Yazılım Tanımlı Otomobil Dönemi</h3>
+                            <p>OTA (over-the-air) güncellemeler, yarı otonom sürüş (Level 2-3), yapay zekâ destekli kokpitler ve V2X iletişimi otomobilleri sürekli gelişen dijital platformlara dönüştürüyor. Elektrikli araç satışları rekor kırıyor.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="future" class="future-section reveal">
-        <div class="future-content">
-            <h2>Gelecek Sessiz ve Otonom</h2>
-            <p>Fosil yakıtların yerini elektrik motorları alırken, yapay zeka sayesinde sürücüsüz araçlar bilim kurgu olmaktan çıkıp yollara iniyor. Yeni nesil piller, sürdürülebilir malzemeler ve birbirleriyle haberleşen akıllı otoyollar ile ulaşım tamamen yeniden tanımlanıyor.</p>
-        </div>
-    </section>
+        <section id="efsane-araclar" class="section legendary-section">
+            <div class="container">
+                <p class="eyebrow reveal-up">Otomotiv Tarihinden</p>
+                <h2 class="section-title reveal-up">Efsane Araçlar</h2>
+                <p class="section-subtitle reveal-up">Yolları, yarış pistlerini ve kültürü sonsuza dek değiştiren ikonik modeller.</p>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <h3>OtoEvrim Projesi</h3>
-            <p>Okul projesi kapsamında hazırlanmış, bilgilendirici bir web tasarımı çalışmasıdır.</p>
-            <div class="socials">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <div class="legendary-grid">
+                    <div class="legendary-card reveal-up" data-delay="0">
+                        <div class="legendary-img">
+                            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" alt="Ford Model T">
+                            <span class="legendary-year">1908</span>
+                        </div>
+                        <div class="legendary-info">
+                            <h3>Ford Model T</h3>
+                            <p>Seri üretimin babası. 15 milyondan fazla üretilerek otomobili halkın ulaşım aracı haline getirdi. Endüstriyel devrimin otomotivdeki yansıması.</p>
+                            <div class="legendary-specs">
+                                <span><i class="fa-solid fa-gauge-high"></i> 72 km/s</span>
+                                <span><i class="fa-solid fa-horse-head"></i> 20 HP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legendary-card reveal-up" data-delay="100">
+                        <div class="legendary-img">
+                            <img src="https://images.unsplash.com/photo-1583267746897-2cf415887172?q=80&w=800&auto=format&fit=crop" alt="Porsche 911">
+                            <span class="legendary-year">1963</span>
+                        </div>
+                        <div class="legendary-info">
+                            <h3>Porsche 911</h3>
+                            <p>60 yılı aşkın üretim süresiyle otomotiv tarihinin en dayanıklı spor otomobil ikonu. Arkadan motorlu tasarımı ve eşsiz sürüş karakteri efsaneleşti.</p>
+                            <div class="legendary-specs">
+                                <span><i class="fa-solid fa-gauge-high"></i> 330+ km/s</span>
+                                <span><i class="fa-solid fa-horse-head"></i> 650+ HP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legendary-card reveal-up" data-delay="200">
+                        <div class="legendary-img">
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" alt="Chevrolet Corvette">
+                            <span class="legendary-year">1953</span>
+                        </div>
+                        <div class="legendary-info">
+                            <h3>Chevrolet Corvette</h3>
+                            <p>Amerikan spor otomobil ruhunun temsilcisi. Yedi nesildir üretimde olan Corvette, V8 gücünü uygun fiyata sunan bir Amerikan efsanesidir.</p>
+                            <div class="legendary-specs">
+                                <span><i class="fa-solid fa-gauge-high"></i> 312 km/s</span>
+                                <span><i class="fa-solid fa-horse-head"></i> 495 HP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="legendary-card reveal-up" data-delay="300">
+                        <div class="legendary-img">
+                            <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?q=80&w=800&auto=format&fit=crop" alt="Bugatti Veyron">
+                            <span class="legendary-year">2005</span>
+                        </div>
+                        <div class="legendary-info">
+                            <h3>Bugatti Veyron</h3>
+                            <p>1001 beygir gücündeki W16 motoruyla 400 km/s barajını aşan ilk üretim otomobili. Mühendislik sınırlarını yeniden tanımlayan bir hiper otomobil.</p>
+                            <div class="legendary-specs">
+                                <span><i class="fa-solid fa-gauge-high"></i> 408 km/s</span>
+                                <span><i class="fa-solid fa-horse-head"></i> 1001 HP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 OtoEvrim. Tüm hakları saklıdır.</p>
+        </section>
+
+        <section id="markalar" class="section brands-section">
+            <div class="container">
+                <p class="eyebrow reveal-up">Sektörün Devleri</p>
+                <h2 class="section-title reveal-up">Dünyaya Yön Veren Ünlü Markalar</h2>
+                <p class="section-subtitle reveal-up">Otomotiv endüstrisini şekillendiren, inovasyonlarıyla standartları belirleyen markalar.</p>
+
+                <div class="brands-grid">
+                    <article class="glass-card reveal-up" data-delay="0">
+                        <div class="brand-icon"><i class="fa-solid fa-crown"></i></div>
+                        <h3>Mercedes-Benz</h3>
+                        <p>1886'dan beri otomobilin kalbi. Lüks, güvenlik ve mühendislik kalitesiyle sektörün referans noktası. Emniyet kemeri gergi sistemi, ABS ve airbag gibi hayat kurtaran inovasyonların öncüsü.</p>
+                        <span class="brand-origin">Almanya, 1926</span>
+                    </article>
+                    <article class="glass-card reveal-up" data-delay="100">
+                        <div class="brand-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+                        <h3>BMW</h3>
+                        <p>"Sürüş keyfi" felsefesiyle bilinir. Dinamik şasi yapıları, dengeli ağırlık dağılımı ve performans karakteriyle premium segmentte güçlü bir yer edinmiştir.</p>
+                        <span class="brand-origin">Almanya, 1916</span>
+                    </article>
+                    <article class="glass-card reveal-up" data-delay="200">
+                        <div class="brand-icon"><i class="fa-solid fa-fire"></i></div>
+                        <h3>Ferrari</h3>
+                        <p>Formula 1 mirasını yola taşıyan marka, aerodinamik mükemmellik ve yüksek devirli motor teknolojileriyle otomotiv dünyasının en saygın ikonlarından biridir.</p>
+                        <span class="brand-origin">İtalya, 1939</span>
+                    </article>
+                    <article class="glass-card reveal-up" data-delay="300">
+                        <div class="brand-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Volvo</h3>
+                        <p>Güvenlik denilince akla gelen ilk marka. Üç noktalı emniyet kemerini icat etti ve patenti serbest bıraktı. Bu karar milyonlarca hayatı kurtardı.</p>
+                        <span class="brand-origin">İsveç, 1927</span>
+                    </article>
+                    <article class="glass-card reveal-up" data-delay="400">
+                        <div class="brand-icon"><i class="fa-solid fa-industry"></i></div>
+                        <h3>Ford</h3>
+                        <p>Seri üretim modelini otomotivde standarda dönüştürerek otomobili kitlelere ulaştırdı. Mustang, F-150 ve Model T gibi ikonlarla kültürel etki yarattı.</p>
+                        <span class="brand-origin">ABD, 1903</span>
+                    </article>
+                    <article class="glass-card reveal-up" data-delay="500">
+                        <div class="brand-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Tesla</h3>
+                        <p>Elektrikli otomobilleri global ölçekte popülerleştirerek sektörün yönünü değiştirdi. Yazılım merkezli araç mimarisi ve otonom sürüş vizyonuyla geleceği şekillendiriyor.</p>
+                        <span class="brand-origin">ABD, 2003</span>
+                    </article>
+                    <article class="glass-card reveal-up" data-delay="600">
+                        <div class="brand-icon"><i class="fa-solid fa-gem"></i></div>
+                        <h3>Rolls-Royce</h3>
+                        <p>Lüks otomobil denilince akla gelen ilk isim. El işçiliği, sessiz motor ve kişiye özel üretim anlayışıyla otomotiv dünyasının zirvesini temsil eder.</p>
+                        <span class="brand-origin">İngiltere, 1904</span>
+                    </article>
+                    <article class="glass-card reveal-up" data-delay="700">
+                        <div class="brand-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <h3>Toyota</h3>
+                        <p>Dünyanın en büyük otomobil üreticisi. Hibrit teknolojisini Prius ile dünyaya tanıttı. "Kaizen" felsefesiyle kalite ve verimlilikte sektör lideri.</p>
+                        <span class="brand-origin">Japonya, 1937</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="teknoloji" class="section tech-section">
+            <div class="container">
+                <p class="eyebrow reveal-up">İnovasyon ve İlerleme</p>
+                <h2 class="section-title reveal-up">Teknolojik Dönüm Noktaları</h2>
+                <p class="section-subtitle reveal-up">Motor, güvenlik, aerodinamik ve elektronik alanındaki büyük sıçramalar.</p>
+
+                <div class="tech-layout">
+                    <div class="tech-image reveal-left">
+                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1400&auto=format&fit=crop" alt="Modern otomobil teknolojisi">
+                        <div class="tech-image-overlay">
+                            <span><i class="fa-solid fa-microchip"></i> 100M+ Kod Satırı</span>
+                        </div>
+                    </div>
+                    <div class="tech-content reveal-right">
+                        <h3>Otomobil teknolojisi yalnızca hız değil; verimlilik, güvenlik ve bağlantılı sürüş deneyimi etrafında gelişti.</h3>
+                        <p>Aşağıdaki başlıklar sektördeki dönüşümün ana omurgasını oluşturur. Her biri onlarca yıllık Ar-Ge sonucu bugünkü seviyeye ulaşmıştır:</p>
+
+                        <div class="progress-item">
+                            <div class="progress-head">
+                                <span><i class="fa-solid fa-engine"></i> Motor Teknolojisi (Benzin, Dizel, Hibrit, Elektrik)</span>
+                                <strong>96%</strong>
+                            </div>
+                            <div class="progress-track"><span class="progress-bar" data-progress="96"></span></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-head">
+                                <span><i class="fa-solid fa-shield"></i> Güvenlik Sistemleri (ABS, ESP, ADAS, Airbag)</span>
+                                <strong>93%</strong>
+                            </div>
+                            <div class="progress-track"><span class="progress-bar" data-progress="93"></span></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-head">
+                                <span><i class="fa-solid fa-wind"></i> Aerodinamik Verimlilik ve Malzeme Bilimi</span>
+                                <strong>89%</strong>
+                            </div>
+                            <div class="progress-track"><span class="progress-bar" data-progress="89"></span></div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-head">
+                                <span><i class="fa-solid fa-microchip"></i> Elektronik, Yazılım ve Bağlanabilirlik</span>
+                                <strong>98%</strong>
+                            </div>
+                            <div class="progress-track"><span class="progress-bar" data-progress="98"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-cards">
+                    <div class="tech-card reveal-up" data-delay="0">
+                        <div class="tech-card-icon"><i class="fa-solid fa-gas-pump"></i></div>
+                        <h4>İçten Yanmalı Motor</h4>
+                        <p>1886'dan bu yana otomobillerin kalbi. Dört zamanlı döngü (emme, sıkıştırma, güç, egzoz) temel prensip olarak günümüzde de geçerliliğini koruyor.</p>
+                    </div>
+                    <div class="tech-card reveal-up" data-delay="100">
+                        <div class="tech-card-icon"><i class="fa-solid fa-battery-full"></i></div>
+                        <h4>Elektrikli Powertrain</h4>
+                        <p>Lityum-iyon batarya teknolojisi ve elektrik motorları, sıfır emisyonlu sürüşü mümkün kıldı. 800V şarj mimarisi ve katı hal bataryalar geleceği şekillendiriyor.</p>
+                    </div>
+                    <div class="tech-card reveal-up" data-delay="200">
+                        <div class="tech-card-icon"><i class="fa-solid fa-car-on"></i></div>
+                        <h4>Otonom Sürüş (ADAS)</h4>
+                        <p>Lidar, radar, kamera ve yapay zekâ birleşimiyle araçlar çevreyi algılıyor. Level 2-3 otonomluk günümüzde mevcut, Level 4-5 hedefleniyor.</p>
+                    </div>
+                    <div class="tech-card reveal-up" data-delay="300">
+                        <div class="tech-card-icon"><i class="fa-solid fa-wifi"></i></div>
+                        <h4>V2X İletişimi</h4>
+                        <p>Araçlar birbirleriyle ve altyapıyla iletişim kuruyor. Trafik optimizasyonu, kaza önleme ve akıllı şehir entegrasyonu bu teknolojinin temel hedefleri.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kategoriler" class="section categories-section">
+            <div class="container">
+                <p class="eyebrow reveal-up">Sınıflandırma</p>
+                <h2 class="section-title reveal-up">Popüler Araç Kategorileri</h2>
+                <p class="section-subtitle reveal-up">Her ihtiyaca ve tutkuya hitap eden farklı araç sınıfları.</p>
+
+                <div class="categories-grid">
+                    <article class="category-card reveal-up" data-delay="0">
+                        <div class="category-img">
+                            <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1200&auto=format&fit=crop" alt="Muscle car">
+                            <div class="category-overlay"></div>
+                        </div>
+                        <div class="category-info">
+                            <span class="category-tag">Performans</span>
+                            <h3>Muscle Cars</h3>
+                            <p>Yüksek hacimli V8 motorları, agresif çizgileri ve güçlü ivmelenmeleriyle performans tutkunlarının vazgeçilmezi. Ford Mustang ve Dodge Charger bu kategorinin ikonlarıdır.</p>
+                        </div>
+                    </article>
+                    <article class="category-card reveal-up" data-delay="100">
+                        <div class="category-img">
+                            <img src="https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?q=80&w=1200&auto=format&fit=crop" alt="Süper otomobil">
+                            <div class="category-overlay"></div>
+                        </div>
+                        <div class="category-info">
+                            <span class="category-tag">Zirve</span>
+                            <h3>Supercars / Hypercars</h3>
+                            <p>Karbon fiber gövde, yarış teknolojisi ve ileri aerodinamikle tasarlanmış, otomotiv mühendisliğinin zirvesini temsil eden araçlar. Bugatti Chiron ve Koenigsegg Jesko örnekleridir.</p>
+                        </div>
+                    </article>
+                    <article class="category-card reveal-up" data-delay="200">
+                        <div class="category-img">
+                            <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?q=80&w=1200&auto=format&fit=crop" alt="Elektrikli araç">
+                            <div class="category-overlay"></div>
+                        </div>
+                        <div class="category-info">
+                            <span class="category-tag">Sürdürülebilir</span>
+                            <h3>Elektrikli Araçlar (EV)</h3>
+                            <p>Düşük emisyon, sessiz sürüş ve anlık tork avantajıyla sürdürülebilir mobilitenin ana taşıyıcı gücü. Tesla, BYD ve Rivian bu alanda öncü oyuncular.</p>
+                        </div>
+                    </article>
+                    <article class="category-card reveal-up" data-delay="300">
+                        <div class="category-img">
+                            <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=1200&auto=format&fit=crop" alt="SUV araç">
+                            <div class="category-overlay"></div>
+                        </div>
+                        <div class="category-info">
+                            <span class="category-tag">Çok Yönlü</span>
+                            <h3>SUV ve Crossover</h3>
+                            <p>Yerden yüksek yapıları, geniş iç hacimleri ve aile odaklı kullanım avantajlarıyla günümüzde en çok tercih edilen segment. Range Rover ve Toyota RAV4 popüler örneklerdir.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="karsilastirma" class="section comparison-section">
+            <div class="container">
+                <p class="eyebrow reveal-up">Dönemler Arası</p>
+                <h2 class="section-title reveal-up">Geçmiş, Bugün ve Gelecek</h2>
+                <p class="section-subtitle reveal-up">Otomobilin 140 yıllık yolculuğunda nasıl değiştiğini karşılaştıralım.</p>
+
+                <div class="comparison-grid">
+                    <div class="comparison-card compare-past reveal-up" data-delay="0">
+                        <div class="comparison-header">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <h3>Geçmiş</h3>
+                            <span>1886 - 1970</span>
+                        </div>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Mekanik kontrol sistemleri</li>
+                            <li><i class="fa-solid fa-check"></i> Manuel şanzıman hâkim</li>
+                            <li><i class="fa-solid fa-check"></i> Basit süspansiyon yapıları</li>
+                            <li><i class="fa-solid fa-check"></i> Krom ve çelik gövdeler</li>
+                            <li><i class="fa-solid fa-check"></i> Karbüratörlü motorlar</li>
+                            <li><i class="fa-solid fa-check"></i> Minimum güvenlik donanımı</li>
+                            <li><i class="fa-solid fa-check"></i> Analog gösterge panelleri</li>
+                        </ul>
+                    </div>
+
+                    <div class="comparison-card compare-present reveal-up" data-delay="150">
+                        <div class="comparison-header">
+                            <i class="fa-solid fa-circle-dot"></i>
+                            <h3>Şimdi</h3>
+                            <span>1970 - 2025</span>
+                        </div>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Elektronik kontrol üniteleri (ECU)</li>
+                            <li><i class="fa-solid fa-check"></i> Otomatik / DCT şanzıman</li>
+                            <li><i class="fa-solid fa-check"></i> Adaptif süspansiyon sistemleri</li>
+                            <li><i class="fa-solid fa-check"></i> Karbon fiber ve alüminyum</li>
+                            <li><i class="fa-solid fa-check"></i> Direkt enjeksiyon + turbo</li>
+                            <li><i class="fa-solid fa-check"></i> ADAS, 8+ airbag, ESP</li>
+                            <li><i class="fa-solid fa-check"></i> Dijital kokpit ve bağlantı</li>
+                        </ul>
+                    </div>
+
+                    <div class="comparison-card compare-future reveal-up" data-delay="300">
+                        <div class="comparison-header">
+                            <i class="fa-solid fa-rocket"></i>
+                            <h3>Gelecek</h3>
+                            <span>2025 - 2050+</span>
+                        </div>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Tam otonom sürüş (Level 4-5)</li>
+                            <li><i class="fa-solid fa-check"></i> Tek vitesli elektrik powertrain</li>
+                            <li><i class="fa-solid fa-check"></i> Aktif aerodinamik gövdeler</li>
+                            <li><i class="fa-solid fa-check"></i> Akıllı malzemeler ve 3D üretim</li>
+                            <li><i class="fa-solid fa-check"></i> Katı hal bataryalar ve hidrojen</li>
+                            <li><i class="fa-solid fa-check"></i> V2X ile tam bağlantılı sürüş</li>
+                            <li><i class="fa-solid fa-check"></i> AR cam ve holografik HUD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gelecek" class="section future-section parallax-section">
+            <div class="future-bg"></div>
+            <div class="container future-content">
+                <p class="eyebrow reveal-up">Yarının Dünyası</p>
+                <h2 class="section-title reveal-up">Arabaların Geleceği</h2>
+                <p class="section-subtitle reveal-up">Mobilite kavramı köklü bir dönüşüm geçiriyor. İşte geleceği şekillendirecek teknolojiler.</p>
+
+                <div class="future-grid">
+                    <article class="future-card reveal-up" data-delay="0">
+                        <div class="future-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h3>Otonom Sürüş</h3>
+                        <p>Lidar, radar ve kamera birleşimiyle araçlar çevreyi gerçek zamanlı algılayarak sürücü müdahalesini minimize ediyor. 2030'lar itibarıyla Level 4 otonomluğun yaygınlaşması bekleniyor. Trafik kazalarının %90'ından fazlası insan hatasından kaynaklanıyor; otonom sistemler bu oranı dramatik biçimde düşürebilir.</p>
+                    </article>
+                    <article class="future-card reveal-up" data-delay="100">
+                        <div class="future-icon"><i class="fa-solid fa-plane-up"></i></div>
+                        <h3>Uçan Araç Konseptleri</h3>
+                        <p>eVTOL (elektrikli dikey kalkış-iniş) çözümleri, özellikle mega kentlerde kısa mesafeli hava mobilitesini mümkün kılmayı amaçlıyor. Joby Aviation, Archer ve Volocopter gibi şirketler bu alanda öncü. Geleceğin şehir içi ulaşımı üç boyutlu hale gelebilir.</p>
+                    </article>
+                    <article class="future-card reveal-up" data-delay="200">
+                        <div class="future-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Yapay Zekâ Destekli Kokpit</h3>
+                        <p>Sesli asistanlar, sürücü davranış analizi ve kişiselleştirilmiş sürüş modları sayesinde araçlar kullanıcı alışkanlıklarına uyum sağlayan akıllı platformlara dönüşüyor. AI, rotayı, enerji yönetimini ve hatta iç aydınlatmayı otomatik optimize edebilecek.</p>
+                    </article>
+                    <article class="future-card reveal-up" data-delay="300">
+                        <div class="future-icon"><i class="fa-solid fa-hydrogen"></i></div>
+                        <h3>Hidrojen Yakıt Hücreleri</h3>
+                        <p>Hidrojen yakıt hücreli araçlar (FCEV), sadece su buharı emisyonu ile uzun menzil ve hızlı dolum avantajı sunuyor. Toyota Mirai ve Hyundai Nexo bu teknolojinin öncü örnekleri. Hidrojen altyapısı geliştikçe FCEV'lerin rolü artacak.</p>
+                    </article>
+                    <article class="future-card reveal-up" data-delay="400">
+                        <div class="future-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                        <h3>Güneş Enerjili Araçlar</h3>
+                        <p>Gövdeye entegre güneş panelleri ile menzil artışı sağlayan araçlar geliştiriliyor. Lightyear ve Aptera gibi girişimler bu alanda öncü. Güneş enerjisi, günlük ortalama 30-50 km ek menzil sağlayabilir.</p>
+                    </article>
+                    <article class="future-card reveal-up" data-delay="500">
+                        <div class="future-icon"><i class="fa-solid fa-city"></i></div>
+                        <h3>Akıllı Şehir Entegrasyonu</h3>
+                        <p>Araçlar trafik ışıkları, otoparklar ve şehir altyapısıyla iletişim kuracak. Akıllı ulaşım sistemleri sayesinde trafik sıkışıklığı azalacak, enerji tüketimi optimize edilecek ve karbon ayak izi minimize edilecek.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="istatistikler" class="section stats-section">
+            <div class="container">
+                <p class="eyebrow reveal-up">Rakamlarla Otomotiv</p>
+                <h2 class="section-title reveal-up">İstatistikler ve Eğlenceli Bilgiler</h2>
+                <p class="section-subtitle reveal-up">Otomobil dünyasından çarpıcı rakamlar ve şaşırtıcı gerçekler.</p>
+
+                <div class="stats-grid">
+                    <article class="stat-card reveal-up" data-delay="0">
+                        <div class="stat-icon"><i class="fa-solid fa-industry"></i></div>
+                        <h3 class="counter" data-target="92" data-suffix="M+">0</h3>
+                        <p>Yıllık dünya otomobil üretimi (yaklaşık, milyon)</p>
+                    </article>
+                    <article class="stat-card reveal-up" data-delay="100">
+                        <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3 class="counter" data-target="18" data-suffix="%">0</h3>
+                        <p>Elektrikli araçların yeni satışlardaki payı (2024)</p>
+                    </article>
+                    <article class="stat-card reveal-up" data-delay="200">
+                        <div class="stat-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <h3 class="counter" data-target="490" data-suffix=" km/s">0</h3>
+                        <p>En hızlı üretim otomobilinin hızı (Koenigsegg Jesko)</p>
+                    </article>
+                    <article class="stat-card reveal-up" data-delay="300">
+                        <div class="stat-icon"><i class="fa-solid fa-calendar"></i></div>
+                        <h3 class="counter" data-target="139" data-suffix="+">0</h3>
+                        <p>Modern otomobilin kabul edilen yaşı (yıl, 1886'dan beri)</p>
+                    </article>
+                </div>
+
+                <div class="facts reveal-up">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Kısa Bilgiler</h3>
+                    <ul>
+                        <li>İstil hız cezası 1896 yılında, saatte yaklaşık 13 km hız yaptığı için kesildi.</li>
+                        <li>Modern bir otomobilde ortalama 100 milyondan fazla satır yazılım kodu bulunabiliyor.</li>
+                        <li>Emniyet kemeri, otomotiv tarihindeki en hayat kurtarıcı buluşlardan biri olarak kabul edilir.</li>
+                        <li>Birçok yeni araç, servis ziyaretine gerek kalmadan internet üzerinden yazılım güncellemesi alabiliyor (OTA).</li>
+                        <li>Dünya genelinde her gün yaklaşık 270.000 yeni araç üretilmektedir.</li>
+                        <li>Tesla'nın ilk Roadster'ı uzaya gönderilen ilk otomobil oldu (2018, SpaceX Falcon Heavy).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="motor-evrimi" class="section engine-section">
+            <div class="container">
+                <p class="eyebrow reveal-up">Güç Kaynakları</p>
+                <h2 class="section-title reveal-up">Motor Teknolojisinin Evrimi</h2>
+                <p class="section-subtitle reveal-up">Buhar gücünden elektriğe: otomobilleri hareket ettiren güç kaynaklarının dönüşümü.</p>
+
+                <div class="engine-timeline">
+                    <div class="engine-step reveal-up" data-delay="0">
+                        <div class="engine-step-number">01</div>
+                        <div class="engine-step-content">
+                            <h4>Buhur Makinesi Dönemi</h4>
+                            <p>1769'da Nicolas-Joseph Cugnot, buhar gücüyle çalışan ilk kara aracını tasarladı. Bu araç, pratik olmaktan uzaktı ancak motorlu ulaşım fikrinin ilk somut örneğiydi.</p>
+                        </div>
+                    </div>
+                    <div class="engine-step reveal-up" data-delay="100">
+                        <div class="engine-step-number">02</div>
+                        <div class="engine-step-content">
+                            <h4>İçten Yanmalı Motor</h4>
+                            <p>Benzin ve dizel yakıtlarla çalışan pistonlu motorlar, 130 yılı aşkın süre boyunca otomobillerin ana güç kaynağı oldu. Dört zamanlı döngü hâlâ geçerliliğini koruyor.</p>
+                        </div>
+                    </div>
+                    <div class="engine-step reveal-up" data-delay="200">
+                        <div class="engine-step-number">03</div>
+                        <div class="engine-step-content">
+                            <h4>Turbo ve Hibrit Teknoloji</h4>
+                            <p>Turbo şarj ile küçük hacimli motorlardan yüksek güç elde edildi. Hibrit sistemler (benzin + elektrik) yakıt tüketimini ve emisyonları düşürdü. Toyota Prius bu alanda öncü oldu.</p>
+                        </div>
+                    </div>
+                    <div class="engine-step reveal-up" data-delay="300">
+                        <div class="engine-step-number">04</div>
+                        <div class="engine-step-content">
+                            <h4>Tam Elektrikli Powertrain</h4>
+                            <p>Elektrik motorları ve lityum-iyon bataryalar, sıfır emisyonlu sürüşü mümkün kıldı. Anlık tork, düşük işletme maliyeti ve sessiz çalışma elektrikli araçların başlıca avantajları.</p>
+                        </div>
+                    </div>
+                    <div class="engine-step reveal-up" data-delay="400">
+                        <div class="engine-step-number">05</div>
+                        <div class="engine-step-content">
+                            <h4>Katı Hal Bataryalar ve Hidrojen</h4>
+                            <p>Katı hal bataryalar daha yüksek enerji yoğunluğu, daha hızlı şarj ve daha fazla güvenlik vaat ediyor. Hidrojen yakıt hücreleri ise uzun mesafe ve hızlı dolum avantajı sunuyor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sss" class="section faq-section">
+            <div class="container">
+                <p class="eyebrow reveal-up">Merak Edilenler</p>
+                <h2 class="section-title reveal-up">Sıkça Sorulan Sorular</h2>
+                <p class="section-subtitle reveal-up">Otomobil tarihi ve geleceği hakkında en çok merak edilen sorular.</p>
+
+                <div class="faq-list">
+                    <div class="faq-item reveal-up" data-delay="0">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>İlk otomobil kim tarafından icat edildi?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Modern otomobilin mucidi olarak Karl Benz kabul edilir. 1886 yılında geliştirdiği Patent-Motorwagen, içten yanmalı motorlu ilk pratik otomobil olarak tarihe geçti. Ancak Gottlieb Daimler ve Wilhelm Maybach da aynı dönemde benzer çalışmalar yürütüyordu.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal-up" data-delay="50">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Elektrikli araçlar gerçekten çevreci mi?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Elektrikli araçlar kullanım sırasında sıfır emisyon üretir. Üretim aşamasındaki karbon ayak izi, fosil yakıtlı araçlara göre daha yüksek olsa da, yaşam döngüsü boyunca toplam emisyon genellikle daha düşüktür. Özellikle yenilenebilir enerji kaynaklarıyla şarj edildiklerinde çevresel faydaları artar.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal-up" data-delay="100">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Otonom araçlar ne zaman yaygınlaşacak?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Level 2-3 otonom sürüş sistemleri hâlihazırda birçok yeni araçta mevcut. Level 4 (yüksek otonomluk) 2030'ların başında belirli bölgelerde yaygınlaşması bekleniyor. Level 5 (tam otonomluk) ise 2035-2040 yılları arasında gerçekleşebilir, ancak yasal ve teknik engeller hâlâ mevcuttur.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal-up" data-delay="150">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Dünyanın en hızlı otomobili hangisi?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Koenigsegg Jesko Absolut, teorik olarak saatte 531 km hıza ulaşabilecek şekilde tasarlanmıştır. SSC Tuatara ve Bugatti Chiron Super Sport 300+ da 450 km/s üzeri hızlara ulaşabilen üretim otomobilleri arasındadır. Bu rakamlar test koşullarına göre değişiklik gösterebilir.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal-up" data-delay="200">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Benzinli araçlar tamamen yok olacak mı?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Avrupa Birliği 2035'ten itibaren yeni benzinli ve dizel araç satışını yasaklamayı planlıyor. Ancak sentetik yakıtlar (e-fuels) için istisnalar tartışılıyor. Tam elektrikli ve hidrojen yakıt hücreli araçların gelecekte hâkim olması beklenirken, benzinli araçlar belirli niş segmentlerde bir süre daha varlığını sürdürebilir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="iletisim" class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#anasayfa" class="logo">
+                        <i class="fa-solid fa-car-side"></i>
+                        <span>Oto</span>Evrim
+                    </a>
+                    <p>Otomobilin 1886'dan günümüze uzanan büyüleyici yolculuğunu kapsamlı ve görsel açıdan güçlü bir şekilde anlatmak amacıyla hazırlanmış profesyonel bir okul projesidir.</p>
+                    <div class="socials">
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" aria-label="E-posta"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Erişim</h4>
+                    <ul>
+                        <li><a href="#zaman-cizelgesi">Zaman Çizelgesi</a></li>
+                        <li><a href="#efsane-araclar">Efsane Araçlar</a></li>
+                        <li><a href="#markalar">Markalar</a></li>
+                        <li><a href="#teknoloji">Teknoloji</a></li>
+                        <li><a href="#kategoriler">Kategoriler</a></li>
+                        <li><a href="#gelecek">Gelecek</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <h4>Hazırlayan</h4>
+                    <p><strong>Ad Soyad:</strong> ....................................</p>
+                    <p><strong>Sınıf:</strong> ..............................................</p>
+                    <p><strong>Ders:</strong> Web Tasarım / Bilişim Teknolojileri</p>
+                    <p><strong>Yıl:</strong> 2025-2026</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OtoEvrim - Arabaların Evrimi Projesi. Tüm hakları saklıdır.</p>
+                <p class="footer-credit">Bu proje eğitim amaçlı hazırlanmıştır.</p>
+            </div>
         </div>
     </footer>
 
